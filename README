@@ -1,0 +1,57 @@
+Obmenu Generator
+
+A pipe/static menu generator for the Openbox Window Manager. It is a simple, lightweight, easily configurable Perl script that generates a valid, full, dynamical Openbox xml-menu based upon the information present in *.desktop application files. It generates a static menu with icons as default. Your present menu.xml file will be backuped to menu.xml.bak file.
+
+Files: obmenu-generator, README.md
+    Copyright (C) 2011-2017 Daniel "Trizen" Șuteu <echo dHJpemVueEBnbWFpbC5jb20K | base64 -d>
+    License: GPLv3
+
+File: schema.pl
+    Copyright (C) 2015, 2016, 2017 Paweł Pijanowski <pavroo@onet.eu>
+    Copyright (C) 2011-2017 Daniel "Trizen" Șuteu <echo dHJpemVueEBnbWFpbC5jb20K | base64 -d>
+    License: GPLv3
+
+File: obmenu-panel-edit
+    Copyright (C) 2017 Paweł Pijanowski <pavroo@onet.eu>
+    License: GPLv3
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Dependencies:
+-------------
+build-essential
+cpanminus
+gexec
+openbox
+perl-base
+sparky-editor
+sparky-remsu
+x-terminal-emulator
+wm-logout
+yad
+
+Conflics:
+------------
+obmenu-generator-rescue
+obmenu-generator-media
+
+Install:
+-------------
+su (or sudo) 
+./install.sh
+
+Uninstall:
+-------------
+su (or sudo)
+./install.sh uninstall

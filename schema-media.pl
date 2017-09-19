@@ -2,7 +2,8 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/07/28
+# Last update 2017/09/19
+
 
 =for comment
 
@@ -11,9 +12,9 @@
     sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
     pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
     file:      include the content of an XML file        {file => "/path/to/file.xml"},
-    raw:       any XML data supported by Openbox          {raw => q(xml data)},
-    begin_cat: begin of a category                  {begin_cat => ["name", "icon"]},
-    end_cat:   end of a category                      {end_cat => undef},
+    raw:       any XML data supported by Openbox          {raw => q(...)},
+    beg:       begin of a category                        {beg => ["name", "icon"]},
+    end:       end of a category                          {end => undef},
     obgenmenu: generic menu settings                {obgenmenu => ["label", "icon"]},
     exit:      default "Exit" action                     {exit => ["label", "icon"]},
 
@@ -43,7 +44,7 @@ our $SCHEMA = [
     {cat => ['utility',     'Accessories', 'applications-utilities']},
     {begin_cat => ['Audio', 'applications-multimedia']},
         {begin_cat => ['Audio Players', 'multimedia-audio-player']},
-            {item => ['audacious',  'Audacious',  'audacious']},
+            {item => ['deadbeef',  'DeadBeeF',  'deadbeef']},
             {item => ['radiotray',  'Radio Tray',  'radiotray']},
         {end_cat => undef},
 
@@ -193,9 +194,9 @@ our $SCHEMA = [
     {end_cat => undef},
 
     #                  LABEL          ICON
-    #{begin_cat => ['My category',  'cat-icon']},
-    #             ... some items ...
-    #{end_cat   => undef},
+    #{beg => ['My category',  'cat-icon']},
+    #          ... some items ...
+    #{end => undef},
 
     #            COMMAND     LABEL        ICON
     #{pipe => ['obbrowser', 'Disk', 'drive-harddisk']},

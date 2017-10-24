@@ -27,4 +27,5 @@ else
 	cp obmenu-panel-edit /usr/bin/
 	cpanm Linux::DesktopFiles
 	cpanm Data::Dump
+	cpanm File::DesktopEntry
 fi

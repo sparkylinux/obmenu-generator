@@ -2,8 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/09/19
-
+# Last update 2017/10/05
 
 =for comment
 
@@ -42,20 +41,20 @@ our $SCHEMA = [
 
     #          NAME            LABEL                ICON
     {cat => ['utility',     'Accessories', 'applications-utilities']},
-    {begin_cat => ['Audio', 'applications-multimedia']},
-        {begin_cat => ['Audio Players', 'multimedia-audio-player']},
+    {beg => ['Audio', 'applications-multimedia']},
+        {beg => ['Audio Players', 'multimedia-audio-player']},
             {item => ['deadbeef',  'DeadBeeF',  'deadbeef']},
             {item => ['radiotray',  'Radio Tray',  'radiotray']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Connection', 'audio-equalizer']},
+        {beg => ['Connection', 'audio-equalizer']},
             {item => ['gjackclock',  'G. JACK Clock',  'gjackclock']},
             {item => ['gjacktransport',  'G. JACK Transport',  'gjacktransport']},
             {item => ['patchage',  'Patchage',  'patchage']},
             {item => ['qjackctl',  'QjackCtl',  'qjackctl']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Effects', 'audio-equalizer']},
+        {beg => ['Effects', 'audio-equalizer']},
             {item => ['zita-at1',  'AT1',  'zita-at1']},
             {item => ['calfjackhost',  'Calf Plugin Pack for JACK',  'calf']},
             {item => ['guitarix',  'guitarix',  'gx_head']},
@@ -65,9 +64,9 @@ our $SCHEMA = [
             {item => ['rakarrack',  'Rakarrack',  'icono_rakarrack_128x128']},
             {item => ['zita-bls1',  'Zita-bls1',  'zita-bls1']},
             {item => ['zita-mu1',  'Zita-mu1',  'zita-mu1']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['MIDI Tools', 'applications-multimedia']},
+        {beg => ['MIDI Tools', 'applications-multimedia']},
             {item => ['gmidimonitor --alsa',  'Gmidimonitor (with ALSA support)',  'gmidimonitor_32x32']},
             {item => ['gmidimonitor --jack',  'Gmidimonitor (with JACK support)',  'gmidimonitor_32x32']},
             {item => ['jack-keyboard',  'JACK Keyboard',  'jack-keyboard']},
@@ -75,9 +74,9 @@ our $SCHEMA = [
             {item => ['qmidinet',  'QmidiNet',  'qmidinet']},
             {item => ['qmidiroute',  'Qmidiroute',  'qmidiroute_32x32']},
             {item => ['vkeybd',  'Virtual MIDI Keyboard',  'vkeybd']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Mixers', 'applications-audio']},
+        {beg => ['Mixers', 'applications-audio']},
             {item => ['echomixer',  'Echomixer',  'hdspmixer']},
             {item => ['envy24control',  'Envy24 control',  'hdspmixer']},
             {item => ['ffado-mixer',  'FFADO Mixer',  'hdspmixer']},
@@ -91,18 +90,18 @@ our $SCHEMA = [
             {item => ['qashctl',  'QasHctl',  'qashctl']},
             {item => ['qasmixer',  'QasMixer',  'qasmixer']},
             {item => ['rmedigicontrol',  'Rmedigicontrol',  'hdspmixer']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Sequencing', 'applications-multimedia']},
+        {beg => ['Sequencing', 'applications-multimedia']},
             {item => ['composite-gui',  'Composite',  'composite32x32']},
             {item => ['hydrogen',  'Hydrogen',  'h2-icon']},
             {item => ['lmms',  'LMMS',  'lmms']},
             {item => ['qtractor',  'Qtractor',  'qtractor']},
             {item => ['rosegarden',  'Rosegarden',  'rosegarden']},
             {item => ['slgui',  'SooperLooper',  'sooperlooper']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['SoftSynths', 'audio-editor']},
+        {beg => ['SoftSynths', 'audio-editor']},
             {item => ['aeolus',  'Aeolus',  'audio-x-generic']},
             {item => ['foo-yc20',  'Foo YC20',  '/usr/share/foo-yc20/graphics/icon.png']},
             {item => ['phasex',  'PHASEX',  'phasex']},
@@ -110,9 +109,9 @@ our $SCHEMA = [
             {item => ['qsynth',  'Qsynth',  'qsynth']},
             {item => ['samplv1_jack',  'samplv1',  'samplv1']},
             {item => ['yoshimi',  'Yoshimi',  'yoshimi']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Tools', 'multimedia-audio-player']},
+        {beg => ['Tools', 'multimedia-audio-player']},
             {item => ['ardour5',  'Ardour5',  'ardour']},
             {item => ['audacity',  'Audacity',  'audacity']},
             {item => ['tagtool',  'Audio Tag Tool',  'TagTool']},
@@ -133,14 +132,14 @@ our $SCHEMA = [
             {item => ['sound-juicer',  'Sound Juicer',  'sound-juicer']},
             {item => ['sweep',  'Sweep',  'sweep']},
             {item => ['tuxguitar',  'tuxguitar',  'tuxguitar']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Tunning', 'audio-equalizer']},
+        {beg => ['Tunning', 'audio-equalizer']},
             {item => ['gxtuner',  'gxtuner',  'gxtuner']},
             {item => ['lingot',  'Lingot',  '/usr/share/pixmaps/lingot/lingot-icon.svg']},
-        {end_cat => undef},
+        {end => undef},
 
-    {end_cat => undef},
+    {end => undef},
     {cat => ['development', 'Development', 'applications-development']},
     {cat => ['education',   'Education',   'applications-science']},
     {cat => ['game',        'Games',       'applications-games']},
@@ -150,20 +149,20 @@ our $SCHEMA = [
     {cat => ['other',       'Other',       'applications-other']},
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
-    {begin_cat => ['Video', 'multimedia-video-player']},
-        {begin_cat => ['Camera', 'shotwell']}, 
+    {beg => ['Video', 'multimedia-video-player']},
+        {beg => ['Camera', 'shotwell']}, 
             {item => ['camorama',  'Camorama Webcam Viewer',  'camorama']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Recording CD/DVD', 'brasero']}, 
+        {beg => ['Recording CD/DVD', 'brasero']}, 
             {item => ['brasero',  'Brasero',  'brasero']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Subtitles', 'accessories-text-editor']}, 
+        {beg => ['Subtitles', 'accessories-text-editor']}, 
             {item => ['subtitleeditor',  'Subtitle Editor',  'subtitleeditor']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Tools', 'multimedia-video-player']},
+        {beg => ['Tools', 'multimedia-video-player']},
             {item => ['avidemux3_qt4',  'Avidemux (Qt)',  'avidemux']},
             {item => ['blender',  'Blender',  'blender']},
             {item => ['ogmrip',  'DVD Encoder OGMRip',  'ogmrip']},
@@ -178,20 +177,20 @@ our $SCHEMA = [
             {item => ['videocut',  'VideoCut',  'videocut']},
             {item => ['winff',  'WinFF',  'winff']},
             {item => ['xjadeo',  'Xjadeo',  'qjadeo']},
-        {end_cat => undef},
+        {end => undef},
 
-        {begin_cat => ['Video Players', 'multimedia-video-player']}, 
+        {beg => ['Video Players', 'multimedia-video-player']}, 
             {item => ['vlc',  'VLC',  'vlc']},
             {item => ['xine',  'xine',  'xine']},
             {item => ['xjadeo',  'Xjadeo',  'qjadeo']},
-        {end_cat => undef},
-    {end_cat => undef},
+        {end => undef},
+    {end => undef},
 
-    {begin_cat => ['Wine', 'wine']},
+    {beg => ['Wine', 'wine']},
         {item => ['winecfg',  'Configure Wine',  'wine-winecfg']},
         {item => ['wine uninstaller',  'Uninstal Wine Software',  'wine-uninstaller']},
         {item => ['sparky-wine',  'Wine Wrapper',  'wine']},
-    {end_cat => undef},
+    {end => undef},
 
     #                  LABEL          ICON
     #{beg => ['My category',  'cat-icon']},
@@ -207,8 +206,8 @@ our $SCHEMA = [
     #{sep       => undef},
 
     ## Custom advanced settings
-    {sep       => undef},
-    {begin_cat => ['Advanced Settings', 'applications-engineering']},
+    {sep => undef},
+    {beg => ['Advanced Settings', 'applications-engineering']},
 
       # Configuration files
       #{item => ["$editor ~/.conkyrc",              'Conky RC',    'text-x-generic']},
@@ -216,9 +215,9 @@ our $SCHEMA = [
       {item => ["obmenu-panel-edit", 'Panel', 'text-x-generic']},
 
       # obmenu-generator category
-      {begin_cat => ['Obmenu-Generator', 'accessories-text-editor']},
-        {item      => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-generic']},
-        {item      => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-generic']},
+      {beg => ['Obmenu-Generator', 'accessories-text-editor']},
+        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-generic']},
+        {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-generic']},
 
         {sep  => undef},
         {item => ['obmenu-generator -s -c',    'Generate a static menu',             'accessories-text-editor']},
@@ -228,17 +227,17 @@ our $SCHEMA = [
         {item => ['obmenu-generator -p -i',    'Generate a dynamic menu with icons', 'accessories-text-editor']},
         {sep  => undef},
 
-        {item    => ['obmenu-generator -d', 'Refresh Icon Set', 'view-refresh']},
-      {end_cat => undef},
+        {item => ['obmenu-generator -d', 'Refresh Icon Set', 'view-refresh']},
+      {end => undef},
 
       # Openbox category
-      {begin_cat => ['Openbox', 'openbox']},
+      {beg => ['Openbox', 'openbox']},
         {item => ['openbox --restart',               'Restart Openbox', 'openbox']},
-        {item      => ["$editor ~/.config/openbox/autostart.sh", 'Openbox Autostart',   'text-x-generic']},
-        {item      => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
-        {item      => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
-      {end_cat => undef},
-    {end_cat => undef},
+        {item => ["$editor ~/.config/openbox/autostart.sh", 'Openbox Autostart',   'text-x-generic']},
+        {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
+        {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
+      {end => undef},
+    {end => undef},
 
     {sep => undef},
 

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/08/24
+# Last update 2017/10/05
 
 
 =for comment
@@ -67,7 +67,7 @@ our $SCHEMA = [
     #{sep       => undef},
 
     ## Custom advanced settings
-    {sep       => undef},
+    {sep => undef},
     {beg => ['Advanced Settings', 'applications-engineering']},
 
       # Configuration files
@@ -77,8 +77,8 @@ our $SCHEMA = [
 
       # obmenu-generator category
       {beg => ['Obmenu-Generator', 'accessories-text-editor']},
-        {item      => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-generic']},
-        {item      => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-generic']},
+        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-generic']},
+        {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-generic']},
 
         {sep  => undef},
         {item => ['obmenu-generator -s -c',    'Generate a static menu',             'accessories-text-editor']},
@@ -88,16 +88,16 @@ our $SCHEMA = [
         {item => ['obmenu-generator -p -i',    'Generate a dynamic menu with icons', 'accessories-text-editor']},
         {sep  => undef},
 
-        {item    => ['obmenu-generator -d', 'Refresh icon set', 'view-refresh']},
+        {item => ['obmenu-generator -d', 'Refresh cache', 'view-refresh']},
       {end => undef},
 
       # Openbox category
       {beg => ['Openbox', 'openbox']},
-        {item => ['openbox --restart',               'Restart Openbox', 'openbox']},
-        {item      => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',   'text-x-generic']},
-        {item      => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
-        {item      => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
-        #{item      => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
+	{item => ['openbox --restart',               'Restart Openbox', 'openbox']},
+        {item => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',   'text-x-generic']},
+        {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
+        {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
+        #{item => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
       {end => undef},
     {end => undef},
 

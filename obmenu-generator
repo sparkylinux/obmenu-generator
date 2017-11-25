@@ -24,7 +24,7 @@
 # Name: obmenu-generator
 # License: GPLv3
 # Created: 25 March 2011
-# Latest edit: 22 October 2017
+# Latest edit: 30 October 2017
 # https://github.com/trizen/obmenu-generator
 
 use 5.014;
@@ -32,15 +32,15 @@ use 5.014;
 #use strict;
 #use warnings;
 
-require Linux::DesktopFiles;    # >= 0.25
+use Linux::DesktopFiles 0.25;
 
 my $pkgname = 'obmenu-generator';
-my $version = '0.82';
+my $version = '0.84';
 
 our ($CONFIG, $SCHEMA);
 my $output_h = \*STDOUT;
 
-my ($pipe, $static, $with_icons, $db_clean, $reconfigure, $update_config, $reconf_openbox);
+my ($pipe, $static, $with_icons, $reload_config, $db_clean, $reconfigure, $update_config, $reconf_openbox);
 
 my $home_dir =
      $ENV{HOME}
@@ -72,9 +72,9 @@ menu:
     -t <label> : menu label text (default: 'Applications')
 
 other:
-    -S <file>  : path to the schema.pl file
-    -C <file>  : path to the config.pl file
-    -o <file>  : path to the menu.xml file
+    -S <file>  : absolute path to the schema.pl file
+    -C <file>  : absolute path to the config.pl file
+    -o <file>  : absolute path to the menu.xml file
     -u         : update the config file
     -r         : regenerate the config file
     -d         : regenerate the cache file
@@ -107,16 +107,15 @@ my $config_help = <<"HELP";
                                 {key => 'OnlyShowIn', re => qr/XFCE/},
                             ],
 
-    | substitutions       : Substitute, by using a regex, in the values of the desktop files.
+    | substitutions       : Substitute, by using a regex, in the values from the desktop files.
                             Example: [
                                 {key => 'Exec', re => qr/xterm/, value => 'sakura', global => 1},
-                                {key => 'Name', re => qr/^GNU I\\w+ M\\w+ P\\w+/, value => 'GIMP'},
                             ],
 
 || ICON SETTINGS
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
-    | icon_size           : Preferred size for icons. (default: 32)
+    | icon_size           : Preferred size for icons. (default: 48)
     | generic_fallback    : Try to shorten icon name at '-' characters before looking at inherited themes. (default: 0)
     | force_icon_size     : Always get the icon scaled to the requested size. (default: 0)
 
@@ -169,6 +168,7 @@ if (@ARGV) {
             $schema_file = shift(@ARGV) // die "$0: option '-S' requires an argument!\n";
         }
         elsif ($arg eq '-C') {
+            $reload_config = 1;
             $config_file = shift(@ARGV) // die "$0: options '-C' requires an argument!\n";
         }
         elsif ($arg eq '-o') {
@@ -244,9 +244,10 @@ my %CONFIG = (
     missing_icon    => 'gtk-missing-image',
     gtk_rc_filename => "$home_dir/.gtkrc-2.0",
 
-    icon_size        => 32,
+    icon_size        => 48,
     force_icon_size  => 0,
     generic_fallback => 0,
+    locale_support   => 1,
 
     VERSION => $version,
              );
@@ -269,14 +270,16 @@ if (not -e $schema_file) {
     if (-e (my $etc_schema_file = "/etc/xdg/$pkgname/schema.pl")) {
         require File::Copy;
         File::Copy::copy($etc_schema_file, $schema_file)
-          or die "$0: can't copy file `$etc_schema_file' to `$schema_file': $!\n";
+          or warn "$0: can't copy file `$etc_schema_file' to `$schema_file': $!\n";
     }
     else {
         die "$0: schema file `$schema_file' does not exists!\n";
     }
 }
 
-require $schema_file;    # Load the configuration files
+# Load the configuration files
+require $schema_file;
+require $config_file if $reload_config;
 
 # Remove invalid user-defined keys
 my @valid_keys = grep exists $CONFIG{$_}, keys %$CONFIG;
@@ -290,25 +293,16 @@ if ($CONFIG{VERSION} != $version) {
 #
 ## Remove the overhead of loading some unneeded modules.
 #
-if ($with_icons) {
-    @INC{
-        qw(
-          strict.pm
-          warnings.pm
-          warnings/register.pm
-          )
-        } = ();
-}
-else {
-    @INC{
-        qw(
-          strict.pm
-          warnings.pm
-          warnings/register.pm
-          Tie/Hash.pm
-          )
-        } = ();
-}
+@INC{
+    qw(
+      Carp.pm
+      strict.pm
+      Exporter.pm
+      Tie/Hash.pm
+      warnings.pm
+      warnings/register.pm
+      )
+    } = ();
 
 my $desk_obj = Linux::DesktopFiles->new(
     %{$CONFIG{'Linux::DesktopFiles'}},
@@ -389,8 +383,14 @@ sub get_icon_path {
     my ($name) = @_;
 
     state $gtk = do {
+
+        delete($INC{'Exporter.pm'}) if !defined($INC{'Exporter.pm'});
+        delete($INC{'Carp.pm'})     if !defined($INC{'Carp.pm'});
+        delete($INC{'Tie/Hash.pm'}) if !defined($INC{'Tie/Hash.pm'});
+
         require Gtk2;
         require Digest::MD5;
+
         'Gtk2'->init;
         'Gtk2';
     };
@@ -512,11 +512,19 @@ foreach my $file ($desk_obj->get_desktop_files) {
 #>>>
 
         eval {
-            require Encode;
-            require File::DesktopEntry;
-            my $fde = File::DesktopEntry->new($file);
-            $info{Name} = Encode::encode_utf8($fde->get('Name'));
-        };
+
+            state $x = do {
+
+                delete($INC{'Exporter.pm'}) if !defined($INC{'Exporter.pm'});
+                delete($INC{'Carp.pm'})     if !defined($INC{'Carp.pm'});
+
+                require Encode;
+                require File::DesktopEntry;
+            };
+
+            $info{Name} = Encode::encode_utf8(File::DesktopEntry->new($file)->get('Name'));
+
+        } if $CONFIG{locale_support};
 
         state $entities = {
                            '&' => '&amp;',

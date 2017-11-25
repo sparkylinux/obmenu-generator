@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/10/05
+# Last update 2017/11/25
 
 =for comment
 
@@ -163,7 +163,7 @@ our $SCHEMA = [
         {end => undef},
 
         {beg => ['Tools', 'multimedia-video-player']},
-            {item => ['avidemux3_qt4',  'Avidemux (Qt)',  'avidemux']},
+            {item => ['avidemux',  'Avidemux (Qt)',  'avidemux']},
             {item => ['blender',  'Blender',  'blender']},
             {item => ['ogmrip',  'DVD Encoder OGMRip',  'ogmrip']},
             {item => ['dvdrip',  'dvd::rip',  'dvdrip']},

@@ -4,7 +4,6 @@
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
 # Last update 2017/10/05
 
-
 =for comment
 
     item:      add an item inside the menu               {item => ["command", "label", "icon"]},

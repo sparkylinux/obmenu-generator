@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/10/05
+# Last update 2017/12/07
 
 =for comment
 
@@ -72,13 +72,13 @@ our $SCHEMA = [
 	{item => ['sparky-eraser',        'Eraser',      'user-trash-full']},
 	{item => ['remsu "x-terminal-emulator -e photorec"',        'PhotoRec',      'terminal']},
 	{item => ['x-terminal-emulator -e mc',        'Midnight Commander',      'MidnightCommander']},
-	{item => ['pcmanfm',        'PCManFM',      'folder']},
+	{item => ['thunar',        'Thunar',      'folder']},
 	{item => ['tuxcmd',        'TUX Commander',      'tuxcmd']},
 	{item => ['xarchiver',        'Xarchiver',      'xarchiver']},
     {sep => undef},
 	{item => ['remsu sparky-eraser',        'Root Eraser',      'user-trash-full']},
 	{item => ['remsu "x-terminal-emulator -e mc"',        'Root Midnight Commander',      'folder-red']},
-	{item => ['remsu pcmanfm',        'Root PCManFM',      'folder-red']},
+	{item => ['remsu thunar',        'Root Thunar',      'folder-red']},
 	{item => ['remsu tuxcmd',        'Root TUX Commander',      'tuxcmd']},
     {end => undef},
 
@@ -226,14 +226,13 @@ our $SCHEMA = [
     {end => undef},
 
     {beg => ['Multimedia', 'configure']},
-	{item => ['pasystray',        'PulseAudio System Tray',      '/usr/share/pixmaps/pasystray.png']},
 	{item => ['pavucontrol',        'PulseAudio Volume Control',      'multimedia-volume-control']},
     {end => undef},
 
     {beg => ['Network', 'applications-internet']},
 	{item => ['hexchat',        'HexChat IRC client',      'hexchat']},
 	{item => ['x-www-browser',        'Web browser',      'web-browser']},
-	{item => ['pcmanfm network:///',        'Windows Network',       'folder-remote']},
+	{item => ['thunar network:///',        'Windows Network',       'folder-remote']},
     {end => undef},
 
     {beg => ['Office', 'applications-office']},

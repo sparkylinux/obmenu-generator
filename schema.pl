@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/10/05
+# Last update 2017/12/07
 
 =for comment
 
@@ -32,7 +32,7 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #          COMMAND                 LABEL              ICON
-    {item => ['pcmanfm',       'File Manager', 'system-file-manager']},
+    {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
     {item => ['x-terminal-emulator',             'Terminal',          'terminal']},
     {item => ['x-www-browser',  'Web Browser',       'web-browser']},
     {item => ['gexec',             'Run command',       'system-run']},

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/12/07
+# Last update 2018/01/03
 
 =for comment
 
@@ -114,7 +114,6 @@ our $SCHEMA = [
         {beg => ['Tools', 'multimedia-audio-player']},
             {item => ['ardour5',  'Ardour5',  'ardour']},
             {item => ['audacity',  'Audacity',  'audacity']},
-            {item => ['tagtool',  'Audio Tag Tool',  'TagTool']},
             {item => ['bitmeter',  'Bitmeter',  'bitmeter']},
             {item => ['idjc',  'Internet DJ Console',  'idjc']},
             {item => ['remsu sparky-codecs',  'Install multimedia codecs',  'gnome-audio']},
@@ -174,7 +173,6 @@ our $SCHEMA = [
             {item => ['gtk-recordmydesktop',  'RecordMyDesktop',  'gtk-recordmydesktop']},
             {item => ['stopmotion',  'Stopmotion',  'stopmotion']},
             {item => ['transmageddon',  'Transmageddon Video Transkoder',  'transmageddon']},
-            {item => ['videocut',  'VideoCut',  'videocut']},
             {item => ['winff',  'WinFF',  'winff']},
             {item => ['xjadeo',  'Xjadeo',  'qjadeo']},
         {end => undef},

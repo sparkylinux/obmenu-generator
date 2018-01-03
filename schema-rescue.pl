@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2017/12/16
+# Last update 2018/01/03
 
 =for comment
 
@@ -196,7 +196,6 @@ our $SCHEMA = [
 	    {item => ['x-terminal-emulator -e man apt',        'APT',      'help-about']},
 	    {item => ['x-terminal-emulator -e man rpm',        'RPM',      'help-about']},
 	    {item => ['x-terminal-emulator -e man yum',        'YUM',      'help-about']},
-	    {item => ['x-terminal-emulator -e man zypper',        'Zypper',      'help-about']},
         {end => undef},
 
 	{beg => ['Passwords MS Windows Help', 'security-medium']},

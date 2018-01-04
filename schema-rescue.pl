@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/03
+# Last update 2018/01/04
 
 =for comment
 
@@ -70,15 +70,15 @@ our $SCHEMA = [
 
     {beg => ['Files', 'folder']},
 	{item => ['sparky-eraser',        'Eraser',      'user-trash-full']},
-	{item => ['remsu "x-terminal-emulator -e photorec"',        'PhotoRec',      'terminal']},
+	{item => ['sparky-fileopen',        'Files',      'folder']},
 	{item => ['x-terminal-emulator -e mc',        'Midnight Commander',      'MidnightCommander']},
-	{item => ['thunar',        'Thunar',      'folder']},
+	{item => ['remsu "x-terminal-emulator -e photorec"',        'PhotoRec',      'terminal']},
 	{item => ['tuxcmd',        'TUX Commander',      'tuxcmd']},
 	{item => ['xarchiver',        'Xarchiver',      'xarchiver']},
     {sep => undef},
 	{item => ['remsu sparky-eraser',        'Root Eraser',      'user-trash-full']},
+	{item => ['remsu sparky-fileopen',        'Root Files',      'folder-red']},
 	{item => ['remsu "x-terminal-emulator -e mc"',        'Root Midnight Commander',      'folder-red']},
-	{item => ['remsu thunar',        'Root Thunar',      'folder-red']},
 	{item => ['remsu tuxcmd',        'Root TUX Commander',      'tuxcmd']},
     {end => undef},
 

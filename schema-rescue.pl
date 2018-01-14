@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/04
+# Last update 2018/01/14
 
 =for comment
 
@@ -292,7 +292,7 @@ our $SCHEMA = [
       # Openbox category
       {beg => ['Openbox', 'openbox']},
         {item => ['openbox --restart',               'Restart Openbox', 'openbox']},
-        {item => ["$editor ~/.config/openbox/autostart.sh", 'Openbox Autostart',   'text-x-generic']},
+        {item => ["$editor ~/.config/openbox/autostart.sh", 'Openbox Autostart.sh',   'text-x-generic']},
         {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-x-generic']},
         {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-x-generic']},
       {end => undef},

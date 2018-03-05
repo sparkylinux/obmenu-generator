@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/14
+# Last update 2018/03/05
 
 =for comment
 
@@ -235,7 +235,7 @@ our $SCHEMA = [
     {end => undef},
 
     {beg => ['Office', 'applications-office']},
-	{item => ['evince',        'Evince',      'evince.png']},
+	{item => ['evince',        'Evince',      'evince']},
     {end => undef},
 
     {beg => ['Settings', 'applications-accessories']},
@@ -254,7 +254,6 @@ our $SCHEMA = [
 	{item => ['sparky-about',        'About SparkyLinux',      '/usr/share/icons/sparky/about/sparky48.png']},
 	{item => ['remsu custom-iso-builder',        'Custom ISO Builder',      'drive-cdrom']},
 	{item => ['remsu deb-package-builder',        'DEB Package Builder',      'gnome-mime-application-x-deb']},
-	{item => ['gdebi-gtk',        'GDebi Package Installer',      'gnome-mime-application-x-deb']},
 	{item => ['remsu sparky-live-usb-creator',        'Live USB Disk Creator',      'drive-removable-media-usb-pendrive']},
 	{item => ['reportbug --exit-prompt --ui gtk2',        'Reportbug',      '/usr/share/icons/hicolor/scalable/places/debian-swirl.svg']},
 	{item => ['remsu synaptic',        'Synaptic',      'synaptic']},

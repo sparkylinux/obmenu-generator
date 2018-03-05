@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/14
+# Last update 2018/01/18
 
 =for comment
 
@@ -170,9 +170,9 @@ our $SCHEMA = [
             {item => ['kdenlive',  'Kdenlive',  'kdenlive']},
             {item => ['lives',  'LiVES',  'lives']},
             {item => ['openshot',  'OpenShot Video Editor',  'openshot']},
-            {item => ['gtk-recordmydesktop',  'RecordMyDesktop',  'gtk-recordmydesktop']},
             {item => ['stopmotion',  'Stopmotion',  'stopmotion']},
             {item => ['transmageddon',  'Transmageddon Video Transkoder',  'transmageddon']},
+            {item => ['vokoscreen',  'Vokoscreen',  'vokoscreen']},
             {item => ['winff',  'WinFF',  'winff']},
             {item => ['xjadeo',  'Xjadeo',  'qjadeo']},
         {end => undef},

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/18
+# Last update 2018/03/17
 
 =for comment
 
@@ -116,7 +116,7 @@ our $SCHEMA = [
             {item => ['audacity',  'Audacity',  'audacity']},
             {item => ['bitmeter',  'Bitmeter',  'bitmeter']},
             {item => ['idjc',  'Internet DJ Console',  'idjc']},
-            {item => ['remsu sparky-codecs',  'Install multimedia codecs',  'gnome-audio']},
+            {item => ['gksudo sparky-codecs',  'Install multimedia codecs',  'gnome-audio']},
             {item => ['jaaa -A -d hw:0',  'Jaaa (with ALSA support)',  'jaaa']},
             {item => ['jaaa -J',  'Jaaa (with JACK support)',  'jaaa']},
             {item => ['timemachine',  'JACK Timemachine',  '/usr/share/timemachine/pixmaps/timemachine-icon.png']},

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/03/05
+# Last update 2018/03/17
 
 =for comment
 
@@ -37,11 +37,11 @@ our $SCHEMA = [
 
     #          NAME            LABEL                ICON
     {beg => ['Backup', 'luckybackup']},
-	{item => ['remsu "x-terminal-emulator -e clonezilla"',        'Clonezilla',      'applications-development']},
+	{item => ['gksudo "x-terminal-emulator -e clonezilla"',        'Clonezilla',      'applications-development']},
 	{item => ['/usr/share/ddrescue-gui/DDRescue-GUI.py',        'DDRescue GUI',      'ddrescue-gui']},
 	{item => ['grsync',        'Grsync',      'grsync']},
 	{item => ['luckybackup',        'luckyBackup',      'luckybackup']},
-	{item => ['remsu redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
+	{item => ['gksudo redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
     {end => undef},
 
     {beg => ['Bootloader', '/usr/share/boot-sav/x-boot-repair.png']},
@@ -49,17 +49,17 @@ our $SCHEMA = [
     {end => undef},
 
     {beg => ['Chroot', 'utilities-terminal']},
-	{item => ['remsu sparky-chrooter',        'Chrooter',      'utilities-terminal']},
+	{item => ['gksudo sparky-chrooter',        'Chrooter',      'utilities-terminal']},
     {end => undef},
     
     {beg => ['Disk', 'gparted']},
-	{item => ['remsu "x-terminal-emulator -e cfdisk"',        'Cfdisk',      'drive-harddisk']},
-	{item => ['remsu disk-manager',        'Disk Manager',      'disk-manager']},
+	{item => ['gksudo "x-terminal-emulator -e cfdisk"',        'Cfdisk',      'drive-harddisk']},
+	{item => ['gksudo disk-manager',        'Disk Manager',      'disk-manager']},
 	{item => ['baobab',        'Disk Usage Analyser',      'baobab']},
-	{item => ['remsu gparted',        'GParted',      'gparted']},
-	{item => ['remsu "x-terminal-emulator -e gsmartcontrol"',        'GSmartControl',      'gsmartcontrol']},
+	{item => ['gksudo gparted',        'GParted',      'gparted']},
+	{item => ['gksudo "x-terminal-emulator -e gsmartcontrol"',        'GSmartControl',      'gsmartcontrol']},
 	{item => ['system-config-lvm',        'Logical Volume Management',      '/usr/share/system-config-lvm/pixmaps/lv_icon.png']},
-	{item => ['remsu "x-terminal-emulator -e testdisk"',        'TestDisk',      'utilities-terminal']},
+	{item => ['gksudo "x-terminal-emulator -e testdisk"',        'TestDisk',      'utilities-terminal']},
     {end => undef},
 
     {beg => ['Encryption', 'truecrypt']},
@@ -72,14 +72,14 @@ our $SCHEMA = [
 	{item => ['sparky-eraser',        'Eraser',      'user-trash-full']},
 	{item => ['sparky-fileopen',        'Files',      'folder']},
 	{item => ['x-terminal-emulator -e mc',        'Midnight Commander',      'MidnightCommander']},
-	{item => ['remsu "x-terminal-emulator -e photorec"',        'PhotoRec',      'terminal']},
+	{item => ['gksudo "x-terminal-emulator -e photorec"',        'PhotoRec',      'terminal']},
 	{item => ['tuxcmd',        'TUX Commander',      'tuxcmd']},
 	{item => ['xarchiver',        'Xarchiver',      'xarchiver']},
     {sep => undef},
-	{item => ['remsu sparky-eraser',        'Root Eraser',      'user-trash-full']},
-	{item => ['remsu sparky-fileopen',        'Root Files',      'folder-red']},
-	{item => ['remsu "x-terminal-emulator -e mc"',        'Root Midnight Commander',      'folder-red']},
-	{item => ['remsu tuxcmd',        'Root TUX Commander',      'tuxcmd']},
+	{item => ['gksudo sparky-eraser',        'Root Eraser',      'user-trash-full']},
+	{item => ['gksudo sparky-fileopen',        'Root Files',      'folder-red']},
+	{item => ['gksudo "x-terminal-emulator -e mc"',        'Root Midnight Commander',      'folder-red']},
+	{item => ['gksudo tuxcmd',        'Root TUX Commander',      'tuxcmd']},
     {end => undef},
 
     {beg => ['Malware', 'gnibbles']},
@@ -94,7 +94,7 @@ our $SCHEMA = [
     {end => undef},
 
     {beg => ['Passwords MS Windows', 'security-medium']},
-	{item => ['remsu ophcrack',        'ophcrack',      '/usr/share/pixmaps/ophcrack.xpm']},
+	{item => ['gksudo ophcrack',        'ophcrack',      '/usr/share/pixmaps/ophcrack.xpm']},
     {end => undef},
 
     {beg => ['Remote Desktop', 'folder-network']},
@@ -109,9 +109,9 @@ our $SCHEMA = [
 	{item => ['uxterm',        'UXTerm',      'terminal']},
 	{item => ['xterm',        'XTerm',      'terminal']},
     {sep => undef},
-	{item => ['remsu lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
-	{item => ['remsu uxterm',        'Root UXterm',      'gksu-root-terminal']},
-	{item => ['remsu xterm',        'Root Xterm',      'gksu-root-terminal']},
+	{item => ['gksudo lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
+	{item => ['gksudo uxterm',        'Root UXterm',      'gksu-root-terminal']},
+	{item => ['gksudo xterm',        'Root Xterm',      'gksu-root-terminal']},
     {end => undef},
     
     ### Help menu ###
@@ -252,15 +252,15 @@ our $SCHEMA = [
 
     {beg => ['System', 'applications-system']},
 	{item => ['sparky-about',        'About SparkyLinux',      '/usr/share/icons/sparky/about/sparky48.png']},
-	{item => ['remsu custom-iso-builder',        'Custom ISO Builder',      'drive-cdrom']},
-	{item => ['remsu deb-package-builder',        'DEB Package Builder',      'gnome-mime-application-x-deb']},
-	{item => ['remsu sparky-live-usb-creator',        'Live USB Disk Creator',      'drive-removable-media-usb-pendrive']},
+	{item => ['gksudo custom-iso-builder',        'Custom ISO Builder',      'drive-cdrom']},
+	{item => ['gksudo deb-package-builder',        'DEB Package Builder',      'gnome-mime-application-x-deb']},
+	{item => ['gksudo sparky-live-usb-creator',        'Live USB Disk Creator',      'drive-removable-media-usb-pendrive']},
 	{item => ['reportbug --exit-prompt --ui gtk2',        'Reportbug',      '/usr/share/icons/hicolor/scalable/places/debian-swirl.svg']},
-	{item => ['remsu synaptic',        'Synaptic',      'synaptic']},
-	{item => ['remsu gnome-system-log',        'System Log',      'logview']},
+	{item => ['gksudo synaptic',        'Synaptic',      'synaptic']},
+	{item => ['gksudo gnome-system-log',        'System Log',      'logview']},
 	{item => ['hardinfo',        'System Profiler and Benchmark',      '/usr/share/hardinfo/pixmaps/logo.png']},
 	{item => ['systemadm',        'Systemd Manager',      'applications-system']},
-	{item => ['remsu sparky-usb-formatter',        'USB Disk Formatter',      'drive-removable-media-usb-pendrive']},
+	{item => ['gksudo sparky-usb-formatter',        'USB Disk Formatter',      'drive-removable-media-usb-pendrive']},
 	{item => ['xkill',        'Xkill',      'xkill']},
     {end => undef},
 

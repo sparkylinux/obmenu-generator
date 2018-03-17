@@ -32,11 +32,11 @@ Dependencies:
 -------------
 build-essential
 cpanminus
+gksu
 gexec
 openbox
 perl-base
 sparky-editor
-sparky-remsu
 x-terminal-emulator
 wm-logout
 yad

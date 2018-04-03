@@ -32,15 +32,16 @@ Dependencies:
 -------------
 build-essential
 cpanminus
-gksu
 gexec
+menu
 openbox
 perl-base
 sparky-editor
-x-terminal-emulator
+sparky-fileopen
+sparky-remsu (>= 0.2.0)
+sparky-xterm (>= 0.2.0)
 wm-logout
 yad
-sparky-fileopen
 
 Conflics:
 ------------

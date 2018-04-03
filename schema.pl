@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/01/14
+# Last update 2018/04/01
 
 =for comment
 

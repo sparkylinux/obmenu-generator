@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/04/01
+# Last update 2018/05/29
 
 =for comment
 
@@ -255,7 +255,6 @@ our $SCHEMA = [
 	{item => ['remsu custom-iso-builder',        'Custom ISO Builder',      'drive-cdrom']},
 	{item => ['remsu deb-package-builder',        'DEB Package Builder',      'gnome-mime-application-x-deb']},
 	{item => ['remsu sparky-live-usb-creator',        'Live USB Disk Creator',      'drive-removable-media-usb-pendrive']},
-	{item => ['reportbug --exit-prompt --ui gtk2',        'Reportbug',      '/usr/share/icons/hicolor/scalable/places/debian-swirl.svg']},
 	{item => ['synaptic-pkexec',        'Synaptic',      'synaptic']},
 	{item => ['gnome-system-log-pkexec',        'System Log',      'logview']},
 	{item => ['hardinfo',        'System Profiler and Benchmark',      '/usr/share/hardinfo/pixmaps/logo.png']},

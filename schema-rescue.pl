@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/05/29
+# Last update 2018/06/20
 
 =for comment
 
@@ -37,15 +37,15 @@ our $SCHEMA = [
 
     #          NAME            LABEL                ICON
     {beg => ['Backup', 'luckybackup']},
-	{item => ['remsu "sparky-xterm clonezilla"',        'Clonezilla',      'applications-development']},
+	{item => ['remsu sparky-xterm-exec clonezilla',        'Clonezilla',      'applications-development']},
 	{item => ['/usr/share/ddrescue-gui/DDRescue-GUI.py',        'DDRescue GUI',      'ddrescue-gui']},
 	{item => ['grsync',        'Grsync',      'grsync']},
 	{item => ['luckybackup',        'luckyBackup',      'luckybackup']},
-	{item => ['su-to-root -X -c redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
+	{item => ['remsu sparky-xterm-exec redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
     {end => undef},
 
     {beg => ['Bootloader', '/usr/share/boot-sav/x-boot-repair.png']},
-	{item => ['boot-repair',        'Boot Repair',      '/usr/share/boot-sav/x-boot-repair.png']},
+	{item => ['remsu sparky-xterm-exec boot-repair',        'Boot Repair',      '/usr/share/boot-sav/x-boot-repair.png']},
     {end => undef},
 
     {beg => ['Chroot', 'utilities-terminal']},
@@ -53,33 +53,33 @@ our $SCHEMA = [
     {end => undef},
     
     {beg => ['Disk', 'gparted']},
-	{item => ['remsu "sparky-xterm cfdisk"',        'Cfdisk',      'drive-harddisk']},
-	{item => ['su-to-root -X -c disk-manager',        'Disk Manager',      'disk-manager']},
+	{item => ['remsu sparky-xterm-exec cfdisk',        'Cfdisk',      'drive-harddisk']},
+	{item => ['remsu sparky-xterm-exec disk-manager',        'Disk Manager',      'disk-manager']},
 	{item => ['baobab',        'Disk Usage Analyser',      'baobab']},
 	{item => ['gparted',        'GParted',      'gparted']},
-	{item => ['remsu "sparky-xterm gsmartcontrol"',        'GSmartControl',      'gsmartcontrol']},
-	{item => ['system-config-lvm',        'Logical Volume Management',      '/usr/share/system-config-lvm/pixmaps/lv_icon.png']},
-	{item => ['remsu "sparky-xterm testdisk"',        'TestDisk',      'utilities-terminal']},
+	{item => ['remsu sparky-xterm-exec gsmartcontrol',        'GSmartControl',      'gsmartcontrol']},
+	{item => ['remsu sparky-xterm-exec system-config-lvm',        'Logical Volume Management',      '/usr/share/system-config-lvm/pixmaps/lv_icon.png']},
+	{item => ['remsu sparky-xterm-exec testdisk',        'TestDisk',      'utilities-terminal']},
     {end => undef},
 
     {beg => ['Encryption', 'truecrypt']},
 	{item => ['veracrypt',        'VeraCrypt',      '/usr/share/pixmaps/veracrypt.xpm']},
-	{item => ['zuluCrypt-gui-pkexec',        'zuluCrypt GUI',      '/usr/share/pixmaps/zuluCrypt.xpm']},
-	{item => ['zuluMount-gui-pkexec',        'zuluMount GUI',      '/usr/share/pixmaps/zuluMount.xpm']},
+	{item => ['zuluCrypt-gui',        'zuluCrypt GUI',      '/usr/share/pixmaps/zuluCrypt.xpm']},
+	{item => ['zuluMount-gui',        'zuluMount GUI',      '/usr/share/pixmaps/zuluMount.xpm']},
     {end => undef},
 
     {beg => ['Files', 'folder']},
 	{item => ['sparky-eraser',        'Eraser',      'user-trash-full']},
 	{item => ['sparky-fileopen',        'Files',      'folder']},
 	{item => ['sparky-xterm mc',        'Midnight Commander',      'MidnightCommander']},
-	{item => ['remsu "sparky-xterm photorec"',        'PhotoRec',      'terminal']},
+	{item => ['remsu sparky-xterm-exec photorec',        'PhotoRec',      'terminal']},
 	{item => ['tuxcmd',        'TUX Commander',      'tuxcmd']},
 	{item => ['xarchiver',        'Xarchiver',      'xarchiver']},
     {sep => undef},
 	{item => ['remsu sparky-eraser',        'Root Eraser',      'user-trash-full']},
 	{item => ['remsu sparky-fileopen',        'Root Files',      'folder-red']},
-	{item => ['remsu "sparky-xterm mc"',        'Root Midnight Commander',      'folder-red']},
-	{item => ['su-to-root -X -c tuxcmd',        'Root TUX Commander',      'tuxcmd']},
+	{item => ['remsu sparky-xterm-exec mc',        'Root Midnight Commander',      'folder-red']},
+	{item => ['remsu sparky-xterm-exec tuxcmd',        'Root TUX Commander',      'tuxcmd']},
     {end => undef},
 
     {beg => ['Malware', 'gnibbles']},
@@ -109,9 +109,9 @@ our $SCHEMA = [
 	{item => ['uxterm',        'UXTerm',      'terminal']},
 	{item => ['xterm',        'XTerm',      'terminal']},
     {sep => undef},
-	{item => ['su-to-root -X -c lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
-	{item => ['su-to-root -X -c uxterm',        'Root UXterm',      'gksu-root-terminal']},
-	{item => ['su-to-root -X -c xterm',        'Root Xterm',      'gksu-root-terminal']},
+	{item => ['remsu sparky-xterm-exec lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
+	{item => ['remsu sparky-xterm-exec uxterm',        'Root UXterm',      'gksu-root-terminal']},
+	{item => ['remsu sparky-xterm-exec xterm',        'Root Xterm',      'gksu-root-terminal']},
     {end => undef},
     
     ### Help menu ###
@@ -217,7 +217,6 @@ our $SCHEMA = [
     {sep => 'Applications'},
     {beg => ['Accessories', 'gnome-menu']},
 	{item => ['evince',        'Evince',      'evince']},
-	{item => ['fcitx',        'Fcitx',      'fcitx']},
 	{item => ['florence',        'Florence Virtual Keyboard',      '/usr/share/pixmaps/florence.svg']},
 	{item => ['gpicview',        'Image Viewer',      'gpicview']},
 	{item => ['leafpad',        'Leafpad',      'leafpad']},

@@ -33,6 +33,7 @@ Dependencies:
 build-essential
 cpanminus
 gexec
+libgtk2-perl
 menu
 openbox
 perl-base

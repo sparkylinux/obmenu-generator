@@ -37,6 +37,7 @@ libgtk2-perl
 menu
 openbox
 perl-base
+procps
 sparky-editor
 sparky-fileopen
 sparky-remsu (>= 0.2.0)

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/06/20
+# Last update 2018/09/25
 
 =for comment
 
@@ -162,7 +162,7 @@ our $SCHEMA = [
 	    {item => ['sparky-xterm man ecryptfs-manager',        'eCryptfs Manager',      'help-about']},
 	    {item => ['sparky-xterm man tcplay',        'Tcplay',      'help-about']},
 	    {item => ['x-www-browser file:///usr/share/veracrypt/doc/HTML/Documentation.html',        'VeraCrypt',      'help-about']},
-	    {item => ['evince /usr/share/zuluCrypt/zuluCrypt.pdf',        'zuluCrypt',      'help-about']},
+	    {item => ['qpdfview /usr/share/zuluCrypt/zuluCrypt.pdf',        'zuluCrypt',      'help-about']},
 	    {item => ['sparky-xterm man zuluMount-gui',        'zuluMount',      'help-about']},
         {end => undef},
 
@@ -216,7 +216,6 @@ our $SCHEMA = [
     ### Applications menu ###
     {sep => 'Applications'},
     {beg => ['Accessories', 'gnome-menu']},
-	{item => ['evince',        'Evince',      'evince']},
 	{item => ['florence',        'Florence Virtual Keyboard',      '/usr/share/pixmaps/florence.svg']},
 	{item => ['gpicview',        'Image Viewer',      'gpicview']},
 	{item => ['leafpad',        'Leafpad',      'leafpad']},
@@ -234,7 +233,7 @@ our $SCHEMA = [
     {end => undef},
 
     {beg => ['Office', 'applications-office']},
-	{item => ['evince',        'Evince',      'evince']},
+	{item => ['qpdfview',        'qpdfview',      'qpdfview']},
     {end => undef},
 
     {beg => ['Settings', 'applications-accessories']},

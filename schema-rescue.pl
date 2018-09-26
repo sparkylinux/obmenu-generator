@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/09/25
+# Last update 2018/09/26
 
 =for comment
 
@@ -152,7 +152,6 @@ our $SCHEMA = [
 	    {item => ['sparky-xterm man smartctl',        'Smartmontools',      'help-about']},
 	    {item => ['sparky-xterm man smart-notifier',        'Smart-Notifier',      'help-about']},
 	    {item => ['sparky-xterm man system-config-lvm',        'System Config LVM',      'help-about']},
-	    {item => ['sparky-xterm man ssm',        'System Storage Manager',      'help-about']},
 	    {item => ['sparky-xterm man testdisk',        'TestDisk',      'help-about']},
         {end => undef},
 

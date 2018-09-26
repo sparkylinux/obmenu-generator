@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/04/01
+# Last update 2018/09/26
 
 =for comment
 
@@ -79,7 +79,6 @@ our $SCHEMA = [
         {beg => ['Mixers', 'applications-audio']},
             {item => ['echomixer',  'Echomixer',  'hdspmixer']},
             {item => ['envy24control',  'Envy24 control',  'hdspmixer']},
-            {item => ['ffado-mixer',  'FFADO Mixer',  'hdspmixer']},
             {item => ['hdajackretask',  'HDAJackRetask',  'hdspmixer']},
             {item => ['hdspconf',  'HDSPConf',  'hdspmixer']},
             {item => ['hdspmixer',  'HDSPMixer',  'hdspmixer']},
@@ -171,7 +170,6 @@ our $SCHEMA = [
             {item => ['lives',  'LiVES',  'lives']},
             {item => ['openshot',  'OpenShot Video Editor',  'openshot']},
             {item => ['stopmotion',  'Stopmotion',  'stopmotion']},
-            {item => ['transmageddon',  'Transmageddon Video Transkoder',  'transmageddon']},
             {item => ['vokoscreen',  'Vokoscreen',  'vokoscreen']},
             {item => ['winff',  'WinFF',  'winff']},
             {item => ['xjadeo',  'Xjadeo',  'qjadeo']},

@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/09/26
+# Last update 2018/10/05
 
 =for comment
 
@@ -37,15 +37,15 @@ our $SCHEMA = [
 
     #          NAME            LABEL                ICON
     {beg => ['Backup', 'luckybackup']},
-	{item => ['remsu sparky-xterm-exec clonezilla',        'Clonezilla',      'applications-development']},
-	{item => ['/usr/share/ddrescue-gui/DDRescue-GUI.py',        'DDRescue GUI',      'ddrescue-gui']},
+	{item => ['remsu sparky-remsu-exec clonezilla',        'Clonezilla',      'applications-development']},
+	{item => ['/usr/share/ddrescue-gui/DDRescue_GUI.py',        'DDRescue GUI',      'ddrescue-gui']},
 	{item => ['grsync',        'Grsync',      'grsync']},
 	{item => ['luckybackup',        'luckyBackup',      'luckybackup']},
-	{item => ['remsu sparky-xterm-exec redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
+	{item => ['remsu sparky-remsu-exec redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
     {end => undef},
 
     {beg => ['Bootloader', '/usr/share/boot-sav/x-boot-repair.png']},
-	{item => ['remsu sparky-xterm-exec boot-repair',        'Boot Repair',      '/usr/share/boot-sav/x-boot-repair.png']},
+	{item => ['remsu sparky-remsu-exec boot-repair',        'Boot Repair',      '/usr/share/boot-sav/x-boot-repair.png']},
     {end => undef},
 
     {beg => ['Chroot', 'utilities-terminal']},
@@ -53,13 +53,13 @@ our $SCHEMA = [
     {end => undef},
     
     {beg => ['Disk', 'gparted']},
-	{item => ['remsu sparky-xterm-exec cfdisk',        'Cfdisk',      'drive-harddisk']},
-	{item => ['remsu sparky-xterm-exec disk-manager',        'Disk Manager',      'disk-manager']},
+	{item => ['remsu sparky-remsu-exec cfdisk',        'Cfdisk',      'drive-harddisk']},
+	{item => ['remsu sparky-remsu-exec disk-manager',        'Disk Manager',      'disk-manager']},
 	{item => ['baobab',        'Disk Usage Analyser',      'baobab']},
-	{item => ['gparted',        'GParted',      'gparted']},
-	{item => ['remsu sparky-xterm-exec gsmartcontrol',        'GSmartControl',      'gsmartcontrol']},
-	{item => ['remsu sparky-xterm-exec system-config-lvm',        'Logical Volume Management',      '/usr/share/system-config-lvm/pixmaps/lv_icon.png']},
-	{item => ['remsu sparky-xterm-exec testdisk',        'TestDisk',      'utilities-terminal']},
+	{item => ['remsu sparky-remsu-exec gparted',        'GParted',      'gparted']},
+	{item => ['remsu sparky-remsu-exec gsmartcontrol',        'GSmartControl',      'gsmartcontrol']},
+	{item => ['remsu sparky-remsu-exec system-config-lvm',        'Logical Volume Management',      '/usr/share/system-config-lvm/pixmaps/lv_icon.png']},
+	{item => ['remsu sparky-remsu-exec testdisk',        'TestDisk',      'utilities-terminal']},
     {end => undef},
 
     {beg => ['Encryption', 'truecrypt']},
@@ -72,14 +72,14 @@ our $SCHEMA = [
 	{item => ['sparky-eraser',        'Eraser',      'user-trash-full']},
 	{item => ['sparky-fileopen',        'Files',      'folder']},
 	{item => ['sparky-xterm mc',        'Midnight Commander',      'MidnightCommander']},
-	{item => ['remsu sparky-xterm-exec photorec',        'PhotoRec',      'terminal']},
+	{item => ['remsu sparky-remsu-exec photorec',        'PhotoRec',      'terminal']},
 	{item => ['tuxcmd',        'TUX Commander',      'tuxcmd']},
 	{item => ['xarchiver',        'Xarchiver',      'xarchiver']},
     {sep => undef},
 	{item => ['remsu sparky-eraser',        'Root Eraser',      'user-trash-full']},
 	{item => ['remsu sparky-fileopen',        'Root Files',      'folder-red']},
-	{item => ['remsu sparky-xterm-exec mc',        'Root Midnight Commander',      'folder-red']},
-	{item => ['remsu sparky-xterm-exec tuxcmd',        'Root TUX Commander',      'tuxcmd']},
+	{item => ['remsu sparky-remsu-exec mc',        'Root Midnight Commander',      'folder-red']},
+	{item => ['remsu sparky-remsu-exec tuxcmd',        'Root TUX Commander',      'tuxcmd']},
     {end => undef},
 
     {beg => ['Malware', 'gnibbles']},
@@ -109,9 +109,9 @@ our $SCHEMA = [
 	{item => ['uxterm',        'UXTerm',      'terminal']},
 	{item => ['xterm',        'XTerm',      'terminal']},
     {sep => undef},
-	{item => ['remsu sparky-xterm-exec lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
-	{item => ['remsu sparky-xterm-exec uxterm',        'Root UXterm',      'gksu-root-terminal']},
-	{item => ['remsu sparky-xterm-exec xterm',        'Root Xterm',      'gksu-root-terminal']},
+	{item => ['remsu sparky-remsu-exec lxterminal',        'Root Lxterminal',      'gksu-root-terminal']},
+	{item => ['remsu sparky-remsu-exec uxterm',        'Root UXterm',      'gksu-root-terminal']},
+	{item => ['remsu sparky-remsu-exec xterm',        'Root Xterm',      'gksu-root-terminal']},
     {end => undef},
     
     ### Help menu ###
@@ -198,6 +198,7 @@ our $SCHEMA = [
         {end => undef},
 
 	{beg => ['Passwords MS Windows Help', 'security-medium']},
+	    {item => ['sparky-xterm man chntpw',        'chntpw',      'help-about']},
 	    {item => ['sparky-xterm man ophcrack',        'ophcrack',      'help-about']},
         {end => undef},
 
@@ -219,6 +220,7 @@ our $SCHEMA = [
 	{item => ['gpicview',        'Image Viewer',      'gpicview']},
 	{item => ['leafpad',        'Leafpad',      'leafpad']},
 	{item => ['gscreenshot',        'Screenshot',      'applets-screenshooter']},
+	{item => ['sparky-xterm vim',        'Vim',      'gvim']},
     {end => undef},
 
     {beg => ['Multimedia', 'configure']},
@@ -249,6 +251,7 @@ our $SCHEMA = [
 
     {beg => ['System', 'applications-system']},
 	{item => ['sparky-about',        'About SparkyLinux',      '/usr/share/icons/sparky/about/sparky48.png']},
+	{item => ['remsu sparky-aptus',        'APTus',      'system-software-install']},
 	{item => ['remsu custom-iso-builder',        'Custom ISO Builder',      'drive-cdrom']},
 	{item => ['remsu deb-package-builder',        'DEB Package Builder',      'gnome-mime-application-x-deb']},
 	{item => ['remsu sparky-live-usb-creator',        'Live USB Disk Creator',      'drive-removable-media-usb-pendrive']},

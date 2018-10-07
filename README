@@ -40,7 +40,7 @@ perl-base
 procps
 sparky-editor
 sparky-fileopen
-sparky-remsu (>= 0.2.0)
+sparky-remsu (>= 0.2.7)
 sparky-xterm (>= 0.2.0)
 wm-logout
 yad

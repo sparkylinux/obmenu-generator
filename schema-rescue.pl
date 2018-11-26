@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/10/05
+# Last update 2018/11/26 by pavroo
 
 =for comment
 
@@ -258,7 +258,6 @@ our $SCHEMA = [
 	{item => ['synaptic-pkexec',        'Synaptic',      'synaptic']},
 	{item => ['gnome-system-log-pkexec',        'System Log',      'logview']},
 	{item => ['hardinfo',        'System Profiler and Benchmark',      '/usr/share/hardinfo/pixmaps/logo.png']},
-	{item => ['systemadm',        'Systemd Manager',      'applications-system']},
 	{item => ['remsu sparky-usb-formatter',        'USB Disk Formatter',      'drive-removable-media-usb-pendrive']},
 	{item => ['xkill',        'Xkill',      'xkill']},
     {end => undef},

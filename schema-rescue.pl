@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2018/11/26 by pavroo
+# Last update 2019/04/24 by pavroo
 
 =for comment
 
@@ -41,6 +41,7 @@ our $SCHEMA = [
 	{item => ['/usr/share/ddrescue-gui/DDRescue_GUI.py',        'DDRescue GUI',      'ddrescue-gui']},
 	{item => ['grsync',        'Grsync',      'grsync']},
 	{item => ['luckybackup',        'luckyBackup',      'luckybackup']},
+	{item => ['/usr/sbin/qt-fsarchiver',        'qt-fsarchiver',      '/usr/share/app-install/icons/harddrive2.png']},
 	{item => ['remsu sparky-remsu-exec redobackup',        'Redo Backup',      '/usr/share/pixmaps/redobackup.png']},
     {end => undef},
 

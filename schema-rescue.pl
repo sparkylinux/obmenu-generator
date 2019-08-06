@@ -2,7 +2,7 @@
 
 # obmenu-generator - schema file
 # Slighlty modified for SparkyLinux by pavroo <pavroo@onet.eu> 2015/Nov/12
-# Last update 2019/04/24 by pavroo
+# Last update 2019/08/06 by pavroo
 
 =for comment
 
@@ -219,7 +219,7 @@ our $SCHEMA = [
     {beg => ['Accessories', 'gnome-menu']},
 	{item => ['florence',        'Florence Virtual Keyboard',      '/usr/share/pixmaps/florence.svg']},
 	{item => ['gpicview',        'Image Viewer',      'gpicview']},
-	{item => ['leafpad',        'Leafpad',      'leafpad']},
+	{item => ['sparky-editor',        'Text Editor',      'leafpad']},
 	{item => ['gscreenshot',        'Screenshot',      'applets-screenshooter']},
 	{item => ['sparky-xterm vim',        'Vim',      'gvim']},
     {end => undef},

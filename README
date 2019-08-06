@@ -7,12 +7,12 @@ Files: obmenu-generator, README.md
     License: GPLv3
 
 File: schema*.pl
-    Copyright (C) 2015-2018 Paweł Pijanowski <pavroo@onet.eu>
+    Copyright (C) 2015-2019 Paweł Pijanowski <pavroo@onet.eu>
     Copyright (C) 2011-2017 Daniel "Trizen" Șuteu <echo dHJpemVueEBnbWFpbC5jb20K | base64 -d>
     License: GPLv3
 
 File: obmenu-panel-edit
-    Copyright (C) 2017-2018 Paweł Pijanowski <pavroo@onet.eu>
+    Copyright (C) 2017-2019 Paweł Pijanowski <pavroo@onet.eu>
     License: GPLv3
 
 This program is free software: you can redistribute it and/or modify
